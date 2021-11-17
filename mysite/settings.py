@@ -65,7 +65,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,6 +141,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost",
 ]
+
+# SMS Configurations
+SMS_API_USERNAME = os.getenv("SMS_API_USERNAME")
+SMS_API_KEY1 = os.getenv("SMS_API_KEY1")
+SMS_API_KEY_DEMO = os.getenv("SMS_API_KEY_DEMO")
 
 django_heroku.settings(locals())
 
