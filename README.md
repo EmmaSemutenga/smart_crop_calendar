@@ -45,3 +45,7 @@ python manage.py runserver
 ### step 6.
 
 Open a browser window at http:localhost:3000
+
+# LICENSES
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
