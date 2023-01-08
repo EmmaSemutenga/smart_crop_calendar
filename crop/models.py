@@ -1,5 +1,5 @@
 from django.db import models
-
+from countries import COUNTRY_CHOICES
 # Create your models here.
 class Crop(models.Model):
     name = models.CharField(max_length=100)
@@ -34,7 +34,9 @@ class MonthlyPrecipitation(models.Model):
     def __str__(self):
         return self.district
 
+
 class SeasonalPrecipitation(models.Model):
+    country =   models.CharField(max_length=6, choices=COUNTRY_CHOICES, default='Uganda')
     district = models.CharField(max_length=20)
     dec_jan_feb = models.FloatField()
     mar_apr_may = models.FloatField()
